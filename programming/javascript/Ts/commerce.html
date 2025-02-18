@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <link rel="stylesheet" href="commerce.css">
+</head>
+<body>
+    <header>
+        <div><img src="image.png" alt="Store Logo"></div>
+        <div>
+            <h1 class="sologen">Republic Day sale starts from 22 Jan To 25 Jan</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count"></span></a></li>
+                <li><a href="Login.html">Login</a></li>
+
+                <li><a href="Signup.html">Signup</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="filter-options">
+            <h2>Filter Products</h2>
+            <div>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="laptops">Laptops</option>
+                    <option value="phones">Phones</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+            <div>
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option value="100000">All</option>
+                    <option value="80000">$500 - $1000</option>
+                    <option value="50000">$400 - $499</option>
+                    <option value="25000">$300 - $399</option>
+                    <option value="10000">$1 - $299</option>
+                </select>
+            </div>
+            <div>
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All</option>
+                    <option value="4">4 Stars & Up</option>
+                    <option value="3">3 Stars & Up</option>
+                    <option value="2">2 Stars & Up</option>
+                    <option value="1">1 Star & Up</option>
+                </select>
+            </div>
+        </aside>
+        <section class="product-grid">
+            <h2>Products</h2>
+            <div id="products">
+                <!-- Sample products will be injected here by JavaScript -->
+            </div>
+        </section>
+        <aside class="cart-summary">
+            <h1>Cart Summary</h1>
+            <div id="cart">
+                <!-- Cart items will be injected here by JavaScript -->
+            </div>
+            <div id="cart-total">
+                <!-- Total amount will be updated here by JavaScript -->
+            </div>
+            <div id="payment-form">
+                <h2>Payment Options</h2>
+                <form>
+                    <label for="name">Name on Card:</label>
+                    <input type="text" id="name" required>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" required>
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required>
+                    <button type="button" onclick="processPayment()">Pay Now</button>
+                </form>
+            </div>
+            <div id="add-product-form">
+                <h2>Add New Product</h2>
+                <form>
+                    <label for="new-product-name">Product Name:</label>
+                    <input type="text" id="new-product-name" required>
+                    <label for="new-product-category">Category:</label>
+                    <input type="text" id="new-product-category" required>
+                    <label for="new-product-price">Price:</label>
+                    <input type="number" id="new-product-price" required>
+                    <label for="new-product-rating">Rating:</label>
+                    <input type="number" id="new-product-rating" step="0.1" required>
+                    <label for="new-product-image">Image URL:</label>
+                    <input type="text" id="new-product-image" required>
+                    <button type="button" onclick="addNewProduct()">Add Product</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Online Store. All rights reserved.</p>
+    </footer>
+    <!-- Notification message -->
+    <div id="notification" class="hidden">Product added to cart!</div>
+    <script src="commerce.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <a routerLink="userList">UserList</a> |
+  <a routerLink="addProduct">AddProduct</a> |
+  <a routerLink="productList">ProductList</a> |
+  <a routerLink="cart">Cart</a>
+  <!-- <app-log-in (logInEvent)="receiveEvent($event)"></app-log-in> -->
+  <diV *ngIf="!isloggedIn">
+    <a routerLink="registration">signUp</a>
+  </diV>
+  <div *ngIf="!isloggedIn; else profileBlock">
+    <a routerLink="logIn">logIn</a>
+  </div>
+  <ng-template #profileBlock>
+    <a routerLink="logIn">Profile</a>
+  </ng-template>
+</nav>
+<router-outlet></router-outlet>

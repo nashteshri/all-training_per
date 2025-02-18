@@ -1,0 +1,39 @@
+<form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+  <label for="id">ID:</label>
+  <input id="id" formControlName="id">
+  <div *ngIf="addProductForm.get('id')!.invalid && addProductForm.get('id')!.touched">
+    ID is required.
+  </div>
+  <br>
+  <label for="name">Name:</label>
+  <input id="name" formControlName="name">
+  <div *ngIf="addProductForm.get('name')!.invalid && addProductForm.get('name')!.touched">
+    Name is required.
+  </div>
+  <br>
+  <label for="imgUrl">Image URL:</label>
+  <input id="imgUrl" formControlName="imgUrl">
+  <div *ngIf="addProductForm.get('imgUrl')!.invalid && addProductForm.get('imgUrl')!.touched">
+    Image URL is required.
+  </div>
+  <br>
+  <label for="price">Price:</label>
+  <input id="price" formControlName="price" type="number">
+  <div *ngIf="addProductForm.get('price')!.invalid && addProductForm.get('price')!.touched">
+    Price must be a positive number.
+  </div>
+  <br>
+  <label for="rating">Rating:</label>
+  <input id="rating" formControlName="rating" type="number">
+  <div *ngIf="addProductForm.get('rating')!.invalid && addProductForm.get('rating')!.touched">
+    Rating must be between 0 and 5.
+  </div>
+  <br>
+  <label for="description">Description:</label>
+  <textarea id="description" formControlName="description"></textarea>
+  <div *ngIf="addProductForm.get('description')!.invalid && addProductForm.get('description')!.touched">
+    Description is required.
+  </div>
+  <br>
+  <button type="submit" [disabled]="addProductForm.invalid">Add Product</button>
+</form>

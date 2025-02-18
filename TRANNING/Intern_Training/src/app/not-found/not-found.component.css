@@ -1,0 +1,42 @@
+/* Container styling */
+.not-found-container {
+    text-align: center;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading styling */
+.not-found-container h1 {
+    font-size: 72px;
+    margin: 0;
+    color: #ff6f61;
+}
+
+/* Paragraph styling */
+.not-found-container p {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Link styling */
+.not-found-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6f61;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.not-found-container a:hover {
+    background-color: #ff4c3b;
+}

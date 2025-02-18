@@ -1,0 +1,31 @@
+<diV *ngIf="!isLoggedIn">
+    <form [formGroup]="logInForm" (ngSubmit)="onSubmit()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" formControlName="name">
+        <span *ngIf="logInForm.get('name')!.invalid && logInForm.get('name')!.touched">
+            Name is required
+        </span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" formControlName="email">
+        <span *ngIf="logInForm.get('email')!.invalid && logInForm.get('email')!.touched">
+            Email is required
+        </span>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password">
+        <span *ngIf="logInForm.get('password')!.invalid && logInForm.get('password')!.touched">
+            Password is required and must be at least 6 characters long
+        </span>
+        <br>
+    
+        <button type="submit">LogIn</button>
+    </form>
+</diV>
+
+<div *ngIf="isLoggedIn" class="profile-container">
+    <h2>Welcome to the {{currUser.name}} Profile</h2>
+    <p>Email: {{currUser.email}}</p>
+    <p>Role: {{currUser.role}}</p>
+    <button (click)="logOut()" class="logout-button">Log Out</button>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <h1 class="header">Product List</h1>
+    <ng-container *ngIf="role === 'Admin'"><button routerLink="/products/addproduct">Add Product</button></ng-container>
+    <ul>
+        <li *ngFor="let product of products" class="product-container">
+            <div class="product-info">
+                <h2>{{product.name}}</h2>
+                <img src="{{product.imageUrl}}" alt="{{product.name}}">
+                <p>Price: {{product.price}}</p>
+                <p>Discount: {{product.discount}}</p>
+                <p>Rating: {{product.rating}}</p>
+                <button (click)="addtoCart(product)">Add to Cart</button>
+            </div>
+        </li>
+    </ul>
+</div>

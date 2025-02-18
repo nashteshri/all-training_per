@@ -1,0 +1,13 @@
+<app-search></app-search>
+<app-filter 
+     [All]="totalProductCount"
+     [inStock]="totalProductInstock" 
+     [outOfstock]="totalProductoutOfstock"
+     (selectedFilterRadioButtonChanged)="onFilterChange($event)">
+</app-filter>
+<div class="ekart--product--container">
+     <div  *ngFor="let prod of products" >
+          <app-product [product]="prod" *ngIf="selectedFilterRadioButton === 'All' || prod.is_in_inventory.toString() === selectedFilterRadioButton"></app-product>
+     </div>   <!--this is the parent who is sending the data to the child  -->
+
+</div>

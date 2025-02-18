@@ -1,0 +1,27 @@
+.header{
+    text-align: center;
+    color:#f8e831;
+    text-decoration: underline;
+    text-decoration-color: #121111;
+}
+
+.product-container {
+    /* border: 1px solid #f0eded; */
+    padding: 20px;
+    margin: 20px;
+
+    width: 220px; /* Adjusted container size */
+    display: inline-block; /* Align containers in a row */
+    vertical-align: top;
+}
+
+.product-info {
+    text-align: center;
+
+    color: #121111;
+}
+
+.product-container img {
+    max-width: 100%;
+    background-color: #e6e6e6;
+}

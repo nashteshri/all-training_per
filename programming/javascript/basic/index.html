@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script src="my.js"></script>
+    <button onclick="red()">Red</button>
+    <button onclick="green()">green</button>
+    <button onclick="blue()">blue</button>
+    <button onclick="yellow()">yellow</button>
+    <button onclick="area()">Claculate the area</button>
+    <p id="area">Area of circle</p>
+
+    enter a number 1:<input type ="text" id="num1">
+    enter a number 2:<input type ="text" id="num2">
+    <button onclick="addnum()">Add</button>
+    <p id-="result"></p>
+
+
+    <button onclick="displayMessage()">Enter Name and Age</button>
+    <p id="result"></p>
+
+
+    <h1>Date Validator</h1>
+    <form onsubmit="event.preventDefault(); validateDate();">
+        <label for="day">Day:</label>
+        <input type="number" id="day" name="day" required><br>
+        <label for="month">Month:</label>
+        <input type="number" id="month" name="month" required><br>
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required><br>
+        <input type="submit" value="Validate Date">
+    </form>
+    <p id="result"></p>
+
+</body>
+</html>
