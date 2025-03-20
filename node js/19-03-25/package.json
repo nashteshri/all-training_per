@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "mssql": "^11.0.1",
+    "nodemon": "^3.1.9",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.17.24",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.8.2"
+  },
+  "name": "19-03-25",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc & nodemon ./disc/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
