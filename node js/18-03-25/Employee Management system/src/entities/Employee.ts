@@ -13,8 +13,5 @@ export class Employee {
     email: string;
 
     @Column()
-    position: string;
-
-    // @Column({ type: "number" })
-    // salary: number;
+    position: string;;
 }
